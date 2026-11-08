@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Member Premium · tescpns.online</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#f6f8fc;--card:#fff;--ink:#0b1a3a;--mute:#5a6785;--line:#e3e9f4;--blue:#1d4ed8;--blue2:#3b82f6;--orange:#f97316;--gold:#b45309;--tint:#edf2ff;--ok:#0f9b6c;--glass:#ffffffcc;--sh:0 1px 2px #0b1a3a0d,0 12px 32px -16px #0b1a3a33;--shh:0 2px 4px #0b1a3a0d,0 28px 48px -20px #1d4ed855;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081022;--card:#101b36;--ink:#eef2fb;--mute:#9aa8c6;--line:#22345a;--blue:#7fb0ff;--blue2:#4f8df5;--orange:#ff9a45;--gold:#fbbf24;--tint:#182a52;--ok:#3fd4a4;--glass:#081022cc;--sh:0 1px 2px #0006,0 12px 32px -16px #000a;--shh:0 2px 4px #0006,0 28px 48px -20px #4f8df566}}
+:root[data-theme="dark"]{--bg:#081022;--card:#101b36;--ink:#eef2fb;--mute:#9aa8c6;--line:#22345a;--blue:#7fb0ff;--blue2:#4f8df5;--orange:#ff9a45;--gold:#fbbf24;--tint:#182a52;--ok:#3fd4a4;--glass:#081022cc;--sh:0 1px 2px #0006,0 12px 32px -16px #000a;--shh:0 2px 4px #0006,0 28px 48px -20px #4f8df566}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;color:var(--ink);font:400 16px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;background:radial-gradient(900px 420px at 85% -80px,#3b82f622,transparent 70%),radial-gradient(700px 360px at 0 0,#f9731614,transparent 70%),var(--bg);min-height:100vh;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--glass);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px clamp(16px,4vw,44px);min-height:54px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--glass);z-index:10}
+.logo{font:800 19px "Plus Jakarta Sans",sans-serif;letter-spacing:-.5px;text-decoration:none}
+.logo .a{color:var(--blue)}.logo .b{color:var(--orange)}
+nav{display:flex;gap:2px;margin-left:10px}
+nav a{padding:6px 14px;border-radius:99px;font-size:14px;color:var(--mute);text-decoration:none;font-weight:500;transition:background .2s,color .2s;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+nav a[aria-current]{background:var(--tint);color:var(--blue);font-weight:600}
+.me{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500}
+.av{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;box-shadow:0 0 0 3px var(--tint)}
+.badge{font-size:11.5px;font-weight:800;letter-spacing:.4px;color:#3b1d00;background:linear-gradient(110deg,#fde68a,#fbbf24 55%,#f59e0b);padding:2px 11px;border-radius:99px;box-shadow:0 6px 14px -8px #f59e0bcc}
+main{max-width:980px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(16px,4vw,44px) 48px}
+.hero{max-width:62ch;margin-bottom:clamp(20px,3vw,30px)}
+h1{font:700 clamp(26px,3.6vw,38px)/1.15 "Fraunces",Georgia,serif;letter-spacing:-.5px}
+.lead{color:var(--mute);margin-top:10px;font-size:15px}
+.seg{display:inline-flex;gap:4px;padding:4px;background:var(--card);border:1px solid var(--line);border-radius:99px;margin-bottom:24px;box-shadow:var(--sh)}
+.seg a{padding:8px 18px;border-radius:99px;font-size:14px;font-weight:600;color:var(--mute);text-decoration:none;transition:background .2s,color .2s}
+.seg a[aria-current]{background:var(--ink);color:var(--card)}
+.grp{font:700 13px "Plus Jakarta Sans",sans-serif;letter-spacing:.8px;text-transform:uppercase;color:var(--mute);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
+.grp:first-of-type{margin-top:0}
+.grp::after{content:"";flex:1;height:1px;background:var(--line)}
+.tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.test{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--sh);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s;animation:in .6s cubic-bezier(.2,.8,.2,1) both}
+.test:nth-child(2){animation-delay:.08s}.test:nth-child(3){animation-delay:.16s}
+.test::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;border-radius:22px 22px 0 0;background:linear-gradient(90deg,var(--blue),var(--blue2) 60%,var(--orange))}
+.test:hover{transform:translateY(-6px);box-shadow:var(--shh);border-color:color-mix(in srgb,var(--blue2) 50%,var(--line))}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.num{width:46px;height:46px;border-radius:14px;background:var(--tint);color:var(--blue);display:grid;place-items:center;font:700 22px "Fraunces",Georgia,serif;transition:background .3s,color .3s,transform .3s}
+.test:hover .num{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;transform:rotate(-6deg)}
+.st{font-size:11.5px;font-weight:700;border-radius:99px;padding:2px 11px;color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,transparent)}
+.st.soon{color:var(--gold);background:color-mix(in srgb,var(--orange) 16%,transparent)}
+.st.done{color:var(--mute);background:var(--tint)}
+.test h3{font:700 20px/1.25 "Fraunces",Georgia,serif;letter-spacing:-.2px}
+.test p{color:var(--mute);font-size:14.5px;flex:1}
+.when{font-size:13px;font-weight:600;color:var(--ink);display:flex;gap:8px;align-items:center}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{font-size:11.5px;font-weight:700;letter-spacing:.3px;color:var(--blue);background:var(--tint);border-radius:99px;padding:2px 11px}
+.chip{align-self:flex-start;font-size:12px;font-weight:600;color:var(--mute);display:inline-flex;align-items:center;gap:6px}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--line);box-shadow:inset 0 0 0 1.5px var(--mute)}
+.chip.on{color:var(--ok)}.chip.on::before{background:var(--ok);box-shadow:none}
+.go{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:var(--card);text-decoration:none;font-weight:600;font-size:15px;border-radius:99px;padding:12px 22px;transition:background .25s,transform .25s}
+.go:hover{background:var(--blue);color:#fff}
+.go span{transition:transform .25s}.go:hover span{transform:translateX(4px)}
+.go.off{background:var(--tint);color:var(--mute);pointer-events:none}
+.info{margin-top:24px;display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 26px;box-shadow:var(--sh);position:relative}
+.info::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;border-radius:22px 0 0 22px;background:linear-gradient(180deg,var(--orange),#fbbf24)}
+.info .ic{flex:none;width:46px;height:46px;border-radius:14px;background:var(--tint);color:var(--ok);display:grid;place-items:center}
+.info .ic svg{width:24px;height:24px}
+.info h3{font:700 19px/1.25 "Fraunces",Georgia,serif}
+.info p{color:var(--mute);font-size:14.5px;margin-top:6px}.info p b{color:var(--ink);font-weight:600}
+.info a{color:var(--blue);font-weight:600}
+.social{margin:44px auto 0;text-align:center}
+.social h2{font:700 18px/1.2 "Fraunces",Georgia,serif}
+.social p{color:var(--mute);font-size:14px;margin-top:4px}
+.social .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:14px}
+.social a{display:inline-flex;align-items:center;gap:8px;color:#fff;border-radius:99px;padding:10px 18px;font-size:14px;font-weight:600;text-decoration:none;transition:transform .25s,filter .25s}
+.social a:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.social svg{width:18px;height:18px;flex:none}
+.tt{background:#010101;border:1px solid #ffffff30}.ig{background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888)}.yt{background:#f00}
+.welcome{position:relative;overflow:hidden;color:#fff;border-radius:24px;padding:clamp(22px,4vw,34px);margin-bottom:clamp(26px,4vw,40px);background:linear-gradient(115deg,#0f1f4d 0%,#1d4ed8 55%,#3b82f6 85%,#f97316 140%);box-shadow:var(--shh);animation:in .6s cubic-bezier(.2,.8,.2,1) both}
+.welcome::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,#fbbf2455,transparent 70%)}
+.welcome .wb{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;color:#3b1d00;background:linear-gradient(110deg,#fde68a,#fbbf24 55%,#f59e0b);padding:2px 11px;border-radius:99px}
+.welcome h2{font:700 clamp(22px,3.2vw,30px)/1.2 "Fraunces",Georgia,serif;letter-spacing:-.3px;margin-top:12px;position:relative}
+.welcome p{color:#d6e4ff;font-size:14.5px;margin-top:8px;max-width:58ch;position:relative}
+.welcome blockquote{margin:18px 0 0;padding:4px 0 4px 14px;border-left:3px solid #fbbf24;font:600 italic 16px/1.5 "Fraunces",Georgia,serif;position:relative;max-width:58ch}
+[hidden]{display:none!important}
+@keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+html{-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+.test h3,.welcome h2{overflow-wrap:anywhere}
+nav{scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+.seg a,nav a,.go{min-height:40px;display:inline-flex;align-items:center;justify-content:center}
+@media (hover:none){.test:hover{transform:none}.go:hover span{transform:none}}
+@media (min-width:1100px){main{max-width:1120px}.tests{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}}
+@media (min-width:1600px){main{max-width:1280px}body{font-size:17px}.test{padding:30px}}
+@media (min-width:641px) and (max-width:1099px){.tests{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.tests{grid-template-columns:1fr;gap:16px}.test{padding:22px}.seg{display:flex;width:100%}.seg a{flex:1;padding:8px 6px;font-size:13.5px;text-align:center}.go{width:100%}.welcome{border-radius:20px}.social .row{gap:8px}}
+@media (max-width:360px){body{font-size:15px}h1{font-size:24px}nav a{padding:5px 10px;font-size:13px}.welcome h2{font-size:20px}.badge{padding:2px 8px}}
+@media (max-height:480px) and (orientation:landscape){header{position:static}body::before{display:none}}
+@media (max-width:560px){header{flex-wrap:wrap;gap:2px 8px}nav{order:3;width:100%;margin:0;overflow-x:auto}.me b{display:none}.info{padding:18px}}
+@media (max-width:400px){header{padding-left:12px;padding-right:12px}main{padding-left:12px;padding-right:12px}.social a{flex:1 1 100%;justify-content:center}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#simulasi"><span class="a">tescpns</span><span class="b">.online</span></a>
+  <nav aria-label="Menu member">
+    <a href="#simulasi" id="n-sim">Simulasi CAT CPNS</a>
+    <a href="#bumn" id="n-bumn">BUMN &amp; Swasta</a>
+  </nav>
+  <div class="me"><div class="av">M</div><b>Member</b><span class="badge">PREMIUM</span></div>
+</header>
+<main>
+  <section class="welcome" aria-label="Selamat datang"><span class="wb">PREMIUM</span><h2>Selamat datang di Member Area Premium 👋</h2><p>Terima kasih sudah bergabung. Semua materi latihan sudah terbuka untuk Anda, tinggal mulai dan nikmati prosesnya.</p><blockquote id="quote"></blockquote></section>
+  <div class="hero"><h1 id="h1"></h1><p class="lead" id="lead"></p></div>
+  <div class="seg" id="seg" role="tablist" aria-label="Halaman simulasi">
+    <a href="#simulasi" id="s-sim">Simulasi CAT CPNS</a>
+    <a href="#tryout" id="s-try">Try Out</a>
+  </div>
+  <div id="view"></div>
+  
+  <section class="social"><h2>Ikuti Kami</h2><p>Tips, info CPNS, BUMN &amp; Swasta, dan update terbaru di media sosial.</p><div class="row"><a class="tt" href="https://www.tiktok.com/@tescpns.online" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.1 6.1 0 1 0 5.2 6V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8A4.5 4.5 0 0 1 16.6 2z"/></svg>TikTok</a><a class="ig" href="https://www.instagram.com/tescpns.online/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a><a class="yt" href="https://www.youtube.com/@tescpns.online" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg>YouTube</a></div></section>
+</main>
+<script>
+/* ====== EDIT DI SINI: semua link & konten member area ====== */
+var TWK=["TWK","TIU","TKP"];
+var DATA={
+ simulasi:{title:"Simulasi CAT CPNS",lead:"Kerjakan dengan tampilan dan waktu seperti ujian CAT. Akses penuh untuk member premium.",groups:[{h:"",items:[
+  {id:"s1",title:"Latihan Simulasi CAT SKD CPNS 50 Sesi",desc:"Simulasi CAT CPNS lengkap: Tes Wawasan Kebangsaan, Tes Intelegensia Umum, dan Tes Karakteristik Pribadi.",tags:TWK,url:"https://simulasicatskdcpns-premium.github.io/50sesi/"},
+  {id:"s2",title:"Bank Soal 10.000 SKD CPNS",desc:"Kumpulan 10.000 soal latihan SKD CPNS untuk memperdalam materi Tes Wawasan Kebangsaan, Tes Intelegensia Umum, dan Tes Karakteristik Pribadi.",tags:TWK,url:"https://simulasicatskdcpns-premium.github.io/10000banksoalckdcpns/"}]}]},
+ tryout:{title:"Try Out",lead:"Jadwal dan akses Try Out akan diinfokan oleh Admin.",groups:[{h:"",items:[
+  ]}]},
+ bumn:{title:"BUMN & Swasta",lead:"Persiapan seleksi rekrutmen BUMN dan perusahaan swasta, dari tes dasar sampai psikotes.",groups:[
+  {h:"BUMN",items:[
+   {id:"b1",title:"10.000 Bank Soal Tes BUMN",desc:"Kumpulan 10.000 soal latihan untuk seleksi BUMN: kemampuan numerik, verbal, dan logika.",tags:["Numerik","Verbal","Logika"],url:"https://tesbumn8-spec.github.io/10000banksoal/"},
+   {id:"b2",title:"Simulasi TKD BUMN 10 Sesi",desc:"Simulasi TKD seleksi BUMN sebanyak 10 sesi: kemampuan numerik, verbal, dan logika.",tags:["Numerik","Verbal","Logika"],url:"https://tesbumn8-spec.github.io/SimulasiTKDBUMN10sesi/"}]},
+  {h:"Swasta",items:[
+   {id:"w1",title:"Simulasi Tes Swasta 10 Sesi",desc:"Simulasi tes seleksi perusahaan swasta sebanyak 10 sesi: kemampuan verbal, logika, dan penalaran.",tags:["Verbal","Logika","Penalaran"],url:"https://testswasta.github.io/tesswasta10sesi/"},
+   {id:"w2",title:"Persamaan Kata (Sinonim)",desc:"Latihan soal persamaan kata (sinonim) untuk tes kemampuan verbal seleksi kerja.",tags:["Verbal","Sinonim"],url:"https://testswasta.github.io/Persamaankata-Sinonim-/"},
+   {id:"w3",title:"Lawan Kata (Antonim)",desc:"Latihan soal lawan kata (antonim) untuk tes kemampuan verbal seleksi kerja.",tags:["Verbal","Antonim"],url:"https://testswasta.github.io/Lawankata-antonim-/"},
+   {id:"w4",title:"Tes Pauli",desc:"Latihan Tes Pauli untuk mengukur ketelitian, kecepatan, dan ketahanan kerja.",tags:["Ketelitian","Kecepatan"],url:"https://tahesx5-ui.github.io/Paulipsikotes/"},
+   {id:"w5",title:"10.000 Figural Psikotes",desc:"Kumpulan 10.000 soal figural psikotes: pola gambar, rotasi, dan penalaran visual.",tags:["Figural","Pola","Visual"],url:"https://tahesx5-ui.github.io/FiguralPsikotes/"}]}]}
+};
+/* ========================================================= */
+/* Try Out 1-12: isi link di sini saat dibuka, contoh {1:"https://alamat-tryout-1"}; yang belum diisi otomatis "Belum dibuka" */
+var TO_LINK={};
+DATA.tryout.groups[0].items=[];
+for(var n=1;n<=12;n++)DATA.tryout.groups[0].items.push({id:"t"+n,title:"Try Out #"+n,desc:"Soal setara ujian CAT lengkap dengan pembahasan.",tags:TWK,status:TO_LINK[n]?"open":"soon",url:TO_LINK[n]||"#"});
+function seen(id){try{return localStorage.getItem("seen-"+id)==="1"}catch(e){return false}}
+function mark(id){try{localStorage.setItem("seen-"+id,"1")}catch(e){}}
+var ST={open:["Terbuka",""],soon:["Belum dibuka","soon"],done:["Selesai","done"]};
+function card(t,i,tryout,num){
+ var s=t.status?ST[t.status]:null,off=t.status==="soon",sv=seen(t.id);
+ return '<article class="test"><div class="top">'+(num?'<div class="num">'+(i+1)+'</div>':'')+(s?'<span class="st '+s[1]+'">'+s[0]+'</span>':'')+'</div>'+
+ '<h3>'+t.title+'</h3><p>'+t.desc+'</p>'+(t.when?'<div class="when">📅 '+t.when+'</div>':'')+
+ '<div class="tags">'+t.tags.map(function(x){return '<span>'+x+'</span>'}).join("")+'</div>'+
+ (sv?'<span class="chip on">Sudah dicoba</span>':'')+
+ '<a class="go'+(off?' off':'')+'" data-id="'+t.id+'" href="'+t.url+'" target="_blank" rel="noopener"'+(off?' aria-disabled="true" tabindex="-1"':'')+'>'+(off?'Belum dibuka':(tryout?'Ikuti Try Out':'Mulai latihan')+' <span>→</span>')+'</a></article>';
+}
+function cur(el,on){if(on)el.setAttribute("aria-current","page");else el.removeAttribute("aria-current")}
+function render(){
+ var k=(location.hash||"#simulasi").slice(1);if(!DATA[k])k="simulasi";
+ var d=DATA[k],sim=k!=="bumn";
+ document.getElementById("h1").textContent=d.title;
+ document.getElementById("lead").textContent=d.lead;
+ document.title=d.title+" · Member Premium · tescpns.online";
+ cur(document.getElementById("n-sim"),sim);cur(document.getElementById("n-bumn"),!sim);
+ document.getElementById("seg").hidden=!sim;
+ cur(document.getElementById("s-sim"),k==="simulasi");cur(document.getElementById("s-try"),k==="tryout");
+ document.getElementById("view").innerHTML=d.groups.map(function(g){
+  return (g.h?'<h2 class="grp">'+g.h+'</h2>':'')+'<div class="tests">'+g.items.map(function(t,i){return card(t,i,k==="tryout",true)}).join("")+'</div>'}).join("");
+ document.querySelectorAll(".go").forEach(function(a){a.addEventListener("click",function(){mark(a.dataset.id);if(!a.parentNode.querySelector(".chip"))a.insertAdjacentHTML("beforebegin",'<span class="chip on">Sudah dicoba</span>')})});
+}
+var QUOTES=["Konsisten berlatih hari ini adalah kelulusan Anda di hari ujian.","Setiap soal yang Anda kerjakan membawa Anda satu langkah lebih dekat ke tujuan.","Jangan takut salah saat latihan, justru di situlah Anda belajar paling banyak.","Impian besar dimulai dari kebiasaan kecil yang dilakukan setiap hari.","Tetap semangat, hasil yang baik selalu menghargai usaha yang tidak berhenti.","Hari ini Anda berlatih, besok Anda siap menghadapi ujian dengan percaya diri."];
+document.getElementById("quote").textContent=QUOTES[Math.floor(Math.random()*QUOTES.length)];
+window.addEventListener("hashchange",render);render();
+</script>
+</body>
+</html>
